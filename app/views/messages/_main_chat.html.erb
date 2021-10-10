@@ -10,24 +10,7 @@
 </div>
 
 <div class="chat">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">門番１</div>
-      <div class="date-time">00:00:00</div>
-    </div>
-    <div class="lower-message">
-      <div class="text">止まれ！通行許可証の無い者の通過は認められていない。</div>
-    </div>
-  </div>
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">門番２</div>
-      <div class="date-time">00:00:00</div>
-    </div>
-    <div class="lower-message">
-      <div class="text">貴様…ここで首を落とす覚悟があるということだな？</div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
